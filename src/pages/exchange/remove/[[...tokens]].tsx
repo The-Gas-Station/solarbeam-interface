@@ -181,7 +181,7 @@ export default function Remove() {
     if (approval === ApprovalState.APPROVED) {
       // removeLiquidityETH
       if (oneCurrencyIsETH) {
-        methodNames = ['removeLiquidityETH', 'removeLiquidityETHSupportingFeeOnTransferTokens']
+        methodNames = ['removeLiquidityETHSupportingFeeOnTransferTokens', 'removeLiquidityETH']
         args = [
           currencyBIsETH ? tokenA.address : tokenB.address,
           liquidityAmount.quotient.toString(),
@@ -209,7 +209,7 @@ export default function Remove() {
     else if (signatureData !== null) {
       // removeLiquidityETHWithPermit
       if (oneCurrencyIsETH) {
-        methodNames = ['removeLiquidityETHWithPermit', 'removeLiquidityETHWithPermitSupportingFeeOnTransferTokens']
+        methodNames = ['removeLiquidityETHWithPermitSupportingFeeOnTransferTokens', 'removeLiquidityETHWithPermit']
         args = [
           currencyBIsETH ? tokenA.address : tokenB.address,
           liquidityAmount.quotient.toString(),
